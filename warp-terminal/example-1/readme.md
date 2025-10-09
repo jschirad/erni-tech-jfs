@@ -15,7 +15,7 @@ Create a reproducible demo you can run from an empty directory to:
 - (Optional) GitHub CLI (`gh`) to create a remote repo from the command line
 - (Optional) Docker Hub or GitHub Packages account to push images from CI
 
-#### 1 Task
+#### Task 1
 Create a tiny Python HTTP app. Save as `app.py`:
 
 ```python
@@ -40,4 +40,43 @@ if __name__ == "__main__":
     server = HTTPServer(("0.0.0.0", 8080), Handler)
     print("Listening on :8080")
     server.serve_forever()
+```
+
+#### Task 2
+
+Containerize the Python HTTP app. Create a `Dockerfile`:
+
+```dockerfile
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy the application file
+COPY app.py .
+
+# Expose port 8080
+EXPOSE 8080
+
+# Run the application
+CMD ["python", "app.py"]
+```
+
+**Commands to complete Task 2:**
+```bash
+# Build the Docker image
+docker build -t warp-demo-app .
+
+# Run the container
+docker run -p 8080:8080 warp-demo-app
+
+# Test the endpoints
+curl http://localhost:8080
+curl http://localhost:8080/health
+
+# Run in background (detached mode)
+docker run -d -p 8080:8080 --name warp-demo warp-demo-app
+
+# Stop the container
+docker stop warp-demo
 ```
