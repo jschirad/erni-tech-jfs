@@ -20,7 +20,7 @@ class Handler(BaseHTTPRequestHandler):
             <title>Warp Git Demo</title>
             <style>
                 body {
-                    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+                    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #44a08d 100%);
                     margin: 0;
                     padding: 0;
                     font-family: 'Arial', sans-serif;
@@ -75,9 +75,9 @@ class Handler(BaseHTTPRequestHandler):
         </head>
         <body>
             <div class="container">
-                <h1>WARP FEATURE A</h1>
-                <p>Hello from Feature A - Red Theme!</p>
-                <p class="demo-info">Running in Docker Container 🐳 | Feature A Branch</p>
+                <h1>WARP UNIFIED DEMO</h1>
+                <p>Hello from Merged Features - Red & Teal Theme!</p>
+                <p class="demo-info">Running in Docker Container 🐳 | Features A+B Merged ✨</p>
                 <a href="/health" class="health-link">Check Health Status</a>
             </div>
         </body>
