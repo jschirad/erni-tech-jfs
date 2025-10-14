@@ -3,17 +3,15 @@
 #### Goal
 Create a reproducible demo you can run from an empty directory to:
 - scaffold a tiny Python HTTP app
-- containerize it
-- create multiple Git branches (including an intentional merge conflict)
-- add a CI workflow file
+- containerize it with Docker
+- run the container locally and test the endpoints
 - demonstrate using Warp to manage Git operations with natural language / agentic prompts
 
 #### Prerequisites
 - Git installed (git >= 2.20 recommended)
 - Warp installed and configured (use `#` to invoke AI suggestions)
 - (Optional) Docker to build the image
-- (Optional) GitHub CLI (`gh`) to create a remote repo from the command line
-- (Optional) Docker Hub or GitHub Packages account to push images from CI
+- (Optional) Python 3.11+ installed to run the app without Docker
 
 #### Task 1
 Create a tiny Python HTTP app. Save as `app.py`:
