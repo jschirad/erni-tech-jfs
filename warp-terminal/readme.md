@@ -1,4 +1,4 @@
-## Warp Git Workflow Demo
+# Warp Git Workflow Demo
 
 #### Goal
 Create a reproducible demo you can run from an empty directory to:
